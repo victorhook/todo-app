@@ -1,0 +1,31 @@
+.context-menu {
+    background-color: #4a627a;
+    position: absolute;
+    z-index: 10;
+}
+
+.context-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.context-item {
+    color: #C0D2FF;
+    transition: 0.3s ease-in-out background-color;
+    padding: .5em 2em;
+    border-bottom: 1px solid #c0d2ff91;
+}
+
+.context-item:last-of-type {
+    border-bottom: none;
+}
+
+.context-item:hover {
+    cursor: pointer;
+    background-color: #2f557a;
+}
+
+.hidden {
+    visibility: hidden;
+}
