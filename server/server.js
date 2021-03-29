@@ -20,6 +20,7 @@ app.listen(config.server.port, () => console.log(`Server stared at port ${config
 
 app.route('/task')
    .get((req, res) => {
+       console.log('hello')
         db.getTasks(tasks => res.json(tasks));
     })
    .post((req, res) => {
@@ -29,9 +30,15 @@ app.route('/task')
                    result => res.json(result));
     })
    .put((req, res) => {
+       console.log(req.query.taskId,
+        req.query.title,
+        req.query.description,
+        req.query.state,
+        req.query.listId)
         db.editTask(req.query.taskId,
                     req.query.title,
                     req.query.description,
+                    req.query.state,
                     req.query.listId,
                     result => res.json(result));
     })
