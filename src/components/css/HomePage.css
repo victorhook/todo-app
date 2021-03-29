@@ -1,0 +1,16 @@
+.homepage {
+    margin-top: 150px;
+}
+
+.title {
+    text-align: center;
+    font-size: 3em;
+    color: #C0D2FF;
+    font-weight: 600;
+    letter-spacing: .1em;
+    margin-bottom: 2em;
+}
+
+.description {
+    font-size: 1.3em;
+}

@@ -1,20 +1,31 @@
+.content-container {
+    margin-top: 35px;
+    position: relative;
+} 
+
+.list-super-title {
+    text-align: center;   
+    font-size: 3em;
+    font-weight: 700;
+    color: #d8e3fd;
+    margin-bottom: 1em;
+}
+
 .list-container {
-    margin-top: 5em;
+    position: relative;
     height: 100%;
     min-height: 80vh;
 }
+
 
 .list-col {
     text-align: center;
     padding: 0em;
 }
 
-.list-col:hover {
-}
-
 .list-col:nth-last-of-type(1), 
 .list-col:nth-last-of-type(2) {
-    border-left: 1px solid rgba(192,210,255, .6);
+    border-left: 1px solid rgba(192,210,255, .6); 
 }
 
 
@@ -26,31 +37,45 @@
 }
 
 .task-list {
-    margin-left: 1em;
+    margin: 0;
 }
 
-.task-title {
-    font-weight: 700;
+.content-container .add-button {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+} 
+
+.list-col:hover {
+    background-color: #324253;
 }
 
-.task-description {
-    font-size: 1.1em;
-    font-weight: 500;
+.column-drag {
+    background-color: #384b5f;
 }
 
-.task {
-    margin: 1em;
-    padding: 1em;
-    width: 15em;
-    display: inline-block;
-    background-color: #6194c4;
-    text-align: left;
-    box-shadow: 0 1em 1em .1em #1d2833;
-    cursor: pointer;
-    transition: 0.3s ease-in-out background-color;
-    word-wrap: break-word;
+@media screen and (max-width: 1200px) {
+    .content-container {
+        margin-top: 2em;
+    } 
 }
 
-.task:hover {
-    background-color: #79a5ce;
+@media screen and (max-width: 992px) {
+    .list-super-title {
+        font-size: 2.5em;
+    }
+    .list-title {
+        font-size: 1.5em;
+    }
+
+    .list-col:nth-last-of-type(1), 
+    .list-col:nth-last-of-type(2) {
+        border-left: 1px solid transparent; 
+    }
+
+    .list-container {
+        position: relative;
+        height: 100%;
+        min-height: 0;
+    }
 }

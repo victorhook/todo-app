@@ -1,0 +1,9 @@
+.nolist-container {
+    margin-top: 10em;
+    text-align: center;
+}
+
+.nolist-container p {
+    font-size: 2em;
+    padding: 4em 0 3em 0;
+}

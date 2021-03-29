@@ -1,0 +1,102 @@
+.task-title {
+    font-weight: 700;
+}
+
+.task-description {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+
+.task-title:focus, 
+.task-description:focus {
+    background-color: rgb(134, 181, 226);
+}
+
+.task {
+    border: 2px solid transparent;
+    padding: 1em;
+    width: 15em;
+    margin: 1em;
+    display: inline-block;
+    background-color: #6194c4;
+    text-align: left;
+    box-shadow: 0 1em 1em .1em #1d2833;
+    cursor: pointer;
+    transition: 0.3s ease-in-out background-color;
+    word-wrap: break-word;
+    position: relative;
+    color: rgb(29, 36, 73);
+}
+
+.task:hover {
+    background-color: #79a5ce;
+}
+
+.task:hover .delete-button,
+.task:hover .arrow-icon {
+    opacity: 1;
+}
+
+.editable:hover {
+    cursor: text;
+}
+
+.editable:focus {
+    outline: none;
+    caret-color: rgb(219, 231, 255);
+}
+
+.editable::selection {
+    background-color: #488ecf;
+}
+
+.focus {
+    border: 2px solid #b4cbe0;
+}
+
+.task .delete-button {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    opacity: 0;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 5px;
+}
+
+.arrow:hover {
+    color: white;
+}
+
+.arrow-left {
+    left: 5px;
+}
+
+.arrow-right {
+    right: 5px;
+}
+
+.arrow-icon {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+}
+
+
+@media screen and (max-width: 992px) {
+    .task {
+        padding: .5em;
+        width: 9em;
+    }
+    .task-title {
+        font-size: 1.4em;
+    }
+    .task-description {
+        font-size: 1em;
+    }
+    
+}

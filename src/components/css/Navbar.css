@@ -1,0 +1,149 @@
+.navbar {
+    width: 100%;
+    background-color: #374C60;
+}
+
+.navbar-toggler {
+    margin: 1em 0;
+}
+
+.navbar-toggler:hover svg {
+    color: #b8c9f0;
+}
+
+.navbar-toggler svg {
+    width: 30px;
+    height: 30px;
+    color: #D8E3FD;
+    transition: 0.3s ease-in-out color;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.navbar-link {
+    font-size: 2em;
+    padding: 1em;
+    border-bottom: 1px solid rgba(192,210,255, .6);
+    transition: 0.3s ease-in-out background-color;
+    position: relative;
+}
+
+.navbar-link:first-of-type {
+    border-top: 1px solid rgba(192,210,255, .6);
+}
+
+.navbar-link:hover {
+    text-decoration: none;
+    background-color: #4e667c;
+    cursor: pointer;
+}
+
+.navbar-link:hover .delete-button {
+    opacity: 1;
+}
+
+.nav-link-text {
+    color: #C0D2FF;
+}
+
+#homeLink {
+    visibility: hidden;
+    height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+/* -- Fixed top navbar -- */
+.fixed-top-navbar {
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    right: 0;
+    z-index: 4000;
+}
+
+.nav-top-link {
+    margin-left: 2em;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: 0.3s ease-in-out color;
+    color: #C0D2FF;
+}
+
+.nav-top-link:hover {
+    cursor: pointer;
+    color: #758fa8;
+    text-decoration: none;
+}
+
+
+/* -- Sidebar only -- */
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    padding: 0;
+} 
+
+.sidebar-list {
+    position: absolute;
+    top: 150px;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-title-container {
+    position: relative;
+}
+
+.sidebar-title-container .add-icon {
+    left: 10px;
+    bottom: 10px;
+    top: auto;
+    right: auto;
+}
+
+.sidebar-list #sidebar-title {
+    font-size: 3em;
+    font-weight: 700;
+    color: #C0D2FF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.navbar-link .delete-button {
+    z-index: 10;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar {
+        position: relative;
+    }
+    .navbar-nav {
+        margin-top: 2em;
+    }
+    .fixed-top-navbar {
+        visibility: hidden;
+    }
+    #homeLink {
+        height: auto;
+        padding: 1em;
+        visibility: visible;
+        font-weight: 600;
+    }
+}
