@@ -39,6 +39,14 @@ class Database {
         })
     }
 
+    getLastTask() {
+
+    }
+
+    getLastList() {
+
+    }
+
     stringifyResult(res) {
         if (res == null)
             return {result: "error"};
@@ -58,20 +66,22 @@ class Database {
         this.baseQuery('INSERT INTO Task (title, description, listId) ' + 
                        'VALUES (?, ?, ?);',
                        [title, description, listId], 
-                       res => callback(this.stringifyResult(res))
+                       res => callback({id: res.insertId})
                        );
     }
 
     addList(name, callback) {
         this.baseQuery('INSERT INTO List (name) VALUES (?);', 
                        [name],
-                       res => callback(this.stringifyResult(res)));
+                       res => callback({id: res.insertId})
+                       );
+                           
     }
 
-    editTask(taskId, title, description, listId, callback) {
-        this.baseQuery('UPDATE Task SET title = ?, description = ?, listId = ? ' + 
+    editTask(taskId, title, description, state, listId, callback) {
+        this.baseQuery('UPDATE Task SET title = ?, description = ?, state = ?, listId = ? ' + 
                        'WHERE taskId = ?;',
-                       [title, description, listId, taskId], 
+                       [title, description, state, listId, taskId], 
                        res => callback(this.stringifyResult(res)));
     }
 
